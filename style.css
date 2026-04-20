@@ -1,0 +1,74 @@
+:root {
+    --bg: #0b0f1a;
+    --card: #161b2c;
+    --accent-blue: #38bdf8;
+    --accent-purple: #a855f7;
+    --text: #f1f5f9;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container { width: 90%; max-width: 1000px; padding: 40px 0; }
+header { text-align: center; margin-bottom: 30px; }
+header h1 { font-size: 2.2rem; margin-bottom: 5px; color: var(--accent-blue); }
+
+/* Main Cards */
+.main-card {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+.ip-border { border-top: 4px solid var(--accent-blue); }
+.device-border { border-top: 4px solid var(--accent-purple); }
+
+.card-header { font-weight: bold; opacity: 0.8; margin-bottom: 15px; display: block; }
+#ip-display { font-size: 3rem; text-align: center; color: var(--accent-blue); margin: 15px 0; }
+
+.grid-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+}
+.stat span { font-size: 0.75rem; color: #94a3b8; display: block; }
+.stat p { font-weight: bold; margin: 5px 0; font-size: 0.95rem; }
+
+/* Tools Grid */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.tool-card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+textarea, input {
+    width: 100%; background: #080c14; border: 1px solid #2d3748;
+    color: white; padding: 12px; border-radius: 8px; margin: 10px 0; box-sizing: border-box;
+}
+
+.btn-main { background: var(--accent-blue); color: #000; border: none; padding: 12px; border-radius: 8px; width: 100%; font-weight: bold; cursor: pointer; }
+.btn-alt { background: #2d3748; color: white; border: none; padding: 12px; border-radius: 8px; flex: 1; cursor: pointer; }
+.btn-refresh { width: 100%; margin-top: 20px; background: none; border: 1px solid #444; color: #ccc; padding: 10px; border-radius: 8px; cursor: pointer; }
+.flex-btns { display: flex; gap: 10px; }
+
+.ad-box {
+    height: 90px; background: rgba(255,255,255,0.02); border: 1px dashed #334155;
+    margin: 30px 0; display: flex; align-items: center; justify-content: center; color: #475569;
+}
+
+.result-text { color: var(--accent-blue); font-size: 1.2rem; font-weight: bold; }
+pre { background: #000; padding: 10px; border-radius: 5px; font-size: 0.8rem; overflow: auto; max-height: 150px; }
+.color-input { height: 50px; cursor: pointer; border: none; padding: 0; }
