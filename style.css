@@ -1,0 +1,74 @@
+:root {
+    --bg-dark: #020617;
+    --gold: #D4AF37;
+    --white: #ffffff;
+    --glass: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+
+body { background-color: var(--bg-dark); color: var(--white); overflow-x: hidden; }
+
+/* Navbar styling */
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 2rem 5%; position: fixed; width: 100%; z-index: 100;
+    background: linear-gradient(to bottom, rgba(2,6,23,0.8), transparent);
+}
+
+.logo { font-size: 1.5rem; font-weight: 700; letter-spacing: -1px; }
+.logo span { color: var(--gold); }
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(2,6,23,1)), 
+                url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover; background-position: center;
+    text-align: center;
+}
+
+.gold-text { color: var(--gold); }
+
+/* Glassmorphism Logic */
+.glass {
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+}
+
+.search-container {
+    margin-top: 3rem; display: flex; padding: 10px; gap: 10px;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+}
+
+.search-container input, .search-container select {
+    background: transparent; border: none; color: white; padding: 15px; outline: none;
+}
+
+.search-btn {
+    background: var(--gold); color: black; border: none; 
+    padding: 15px 30px; border-radius: 12px; font-weight: bold; cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Property Cards */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 5%; }
+
+.glass-card {
+    background: var(--glass); border: 1px solid var(--glass-border);
+    border-radius: 24px; overflow: hidden; transition: 0.4s ease;
+}
+
+.glass-card:hover { transform: translateY(-10px); border-color: var(--gold); }
+
+.card-img { height: 250px; background-size: cover; position: relative; }
+
+.card-info { padding: 25px; }
+
+/* Animations */
+.reveal { opacity: 0; transform: translateY(30px); transition: 1s ease-out; }
+.reveal.active { opacity: 1; transform: translateY(0); }
